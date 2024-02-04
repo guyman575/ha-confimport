@@ -1,0 +1,99 @@
+synth_boy_1:
+  alias: Synth Boy
+  mode: single
+  sequence:
+  - data:
+      brightness_pct: 40
+      rgb_color:
+      - 255
+      - 116
+      - 86
+    service: light.turn_on
+    target:
+      entity_id: light.hue_color_lamp_1
+  - data:
+      brightness_pct: 100
+      rgb_color:
+      - 127
+      - 172
+      - 255
+    service: light.turn_on
+    target:
+      entity_id: light.office_bed_lights
+  - data:
+      brightness_pct: 100
+      rgb_color:
+      - 30
+      - 255
+      - 25
+    service: light.turn_on
+    target:
+      entity_id: light.sengled_light_1
+  - data:
+      brightness_pct: 100
+      rgb_color:
+      - 237
+      - 30
+      - 255
+    service: light.turn_on
+    target:
+      entity_id: light.sengled_light_2
+  - data:
+      brightness_pct: 100
+      rgb_color:
+      - 20
+      - 29
+      - 255
+    service: light.turn_on
+    target:
+      entity_id: light.sengled_light_3
+  - data:
+      brightness_pct: 100
+      rgb_color:
+      - 255
+      - 0
+      - 255
+    service: light.turn_on
+    target:
+      entity_id: light.desk
+  - data:
+      brightness_pct: 100
+      rgb_color:
+      - 0
+      - 255
+      - 200
+    service: light.turn_on
+    target:
+      entity_id: light.upper_shelf
+  - data:
+      brightness_pct: 100
+      rgb_color:
+      - 115
+      - 0
+      - 255
+    service: light.turn_on
+    target:
+      entity_id: light.lower_shelf
+  - data:
+      brightness_pct: 10
+    service: light.turn_on
+    target:
+      entity_id:
+      - light.cassetta_sign
+  - data: {}
+    service: light.turn_on
+    target:
+      entity_id:
+      - light.daft_punk_sign
+  - data:
+      value: 50
+    service: input_number.set_value
+    target:
+      entity_id:
+      - input_number.ge_light_brightness
+  - data:
+      option: ultramarine
+    service: input_select.select_option
+    target:
+      entity_id:
+      - input_select.ge_light_color
